@@ -8,7 +8,7 @@ planilha = r'C:\Users\moesios\Desktop\EXTERNAS\regressão python.xlsx'
 df_centrob = pd.read_excel(planilha, sheet_name='Centro-bairro')
 df_bairroc = pd.read_excel(planilha, sheet_name='bairro-centro')
 
-def preparar_e_prever(df, ajuste_fator=0.8):
+def preparar_e_prever(df, ajuste_fator=0.4):
     df['Minutos'] = df['Intervalo'].apply(lambda x: x.hour * 60 + x.minute)
     columns_of_interest = ['Vol 15min', 'Vol 60min', 'Pedestres', 'Bicicletas', 'Motocicletas', 'Automóveis', 'Ônibus', 'Caminhões']
 
